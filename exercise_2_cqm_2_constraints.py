@@ -28,8 +28,8 @@ def define_variables(stockcodes):
             List of variables named 's_{stk}' for each stock stk in stockcodes, where stk is replaced by the stock code.
     """
 
-    # TODO: Define your list of variables and call it stocks
-    ## Hint: Remember to import the required package at the top of the file for Binary variables
+    # TODO: Define the list of variables and call it stocks
+    ## Hint: Remember to import the required package at the top of the file for binary variables
 
 
     return stocks
@@ -68,7 +68,7 @@ def build_cqm(stocks, num_stocks_to_buy, price, returns, budget):
 
 
     # TODO: Add an objective function maximize returns
-    ## Hint: Use the information in returns, and remember to convert to minimization
+    ## Hint: Use the information in returns and remember to convert to minimization
 
 
     # TODO: Add a constraint that the cost of the purchased stocks is less than or equal to the budget
@@ -79,7 +79,7 @@ def build_cqm(stocks, num_stocks_to_buy, price, returns, budget):
 
 def sample_cqm(cqm):
 
-    # TODO: Define your sampler as LeapHybridCQMSampler
+    # TODO: Define the sampler as LeapHybridCQMSampler
     ## Hint: Remember to import the required package at the top of the file
 
 
