@@ -28,8 +28,8 @@ def define_variables(stockcodes):
             List of variables named 's_{stk}' for each stock stk in stockcodes, where stk is replaced by the stock code.
     """
 
-    # TODO: Define your list of variables and call it stocks
-    ## Hint: Remember to import the required package at the top of the file for Binary variables
+    # TODO: Define the list of variables and call it stocks
+    ## Hint: Remember to import the required package at the top of the file for binary variables
 
 
     return stocks
@@ -116,5 +116,5 @@ if __name__ == '__main__':
     sampleset = sample_cqm(cqm)
     
     # Process and print solution
-    print("\nPart 3 solution: Submit the problem to the CQM hybrid solver with 2 constraints and quadratic objective using binary variables \n")
+    print("\nPart 3 solution: Submit the problem to the CQM hybrid solver with two constraints and quadratic objective using binary variables \n")
     utilities_cqm.process_sampleset(sampleset, stockcodes)
