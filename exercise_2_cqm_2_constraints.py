@@ -113,5 +113,5 @@ if __name__ == '__main__':
     sampleset = sample_cqm(cqm)
     
     # Process and print solution
-    print("\nPart 2 solution: Submit the problem to the CQM hybrid solver with 2 constraints using binary variables \n")
+    print("\nPart 2 solution: Submit the problem to the CQM hybrid solver with two constraints using binary variables \n")
     utilities_cqm.process_sampleset(sampleset, stockcodes)
