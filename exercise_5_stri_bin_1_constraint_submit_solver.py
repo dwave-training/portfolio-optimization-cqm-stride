@@ -38,7 +38,7 @@ def build_model(stockcodes, returns, num_stocks_to_buy):
     ## Hint: Remember to import the required package at the top of the file 
 
 
-    # TODO: Define your binary variable and call it stocks
+    # TODO: Define the binary variable and call it stocks
     # Hint: Use len() to determine the total number of binary variables
 
 
@@ -84,7 +84,7 @@ if __name__ == '__main__':
 
 
     # Process and print solution
-    print("\nPart 5 solution: Submit the problem to the Stride hybrid solver with 1 constraint using binary variables\n")
+    print("\nPart 5 solution: Submit the problem to the Stride hybrid solver with one constraint using binary variables\n")
     """Read in solution returned using .state(0) and display solution."""
 
     # TODO: Return the optimal solution for the binary variable symbol and store it stocks_state
