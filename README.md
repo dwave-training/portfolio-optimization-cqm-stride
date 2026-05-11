@@ -1,6 +1,6 @@
 [![Open in GitHub Codespaces](
   https://img.shields.io/badge/Open%20in%20GitHub%20Codespaces-333?logo=github)](
-  https://codespaces.new/dwave-training/portfolio-optimization?quickstart=1)
+  https://codespaces.new/dwave-training/portfolio-optimization-cqm-stride?quickstart=1)
   
 # Portfolio Optimization with CQM and Stride<sup>TM</sup> Hybrid Solvers
 
