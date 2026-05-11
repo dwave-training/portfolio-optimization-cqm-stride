@@ -38,7 +38,7 @@ def build_model(stockcodes, returns, num_stocks_to_buy):
     ## Hint: Remember to import the required package at the top of the file 
 
 
-    # TODO: Define your binary variable and call it stocks
+    # TODO: Define the binary variable and call it stocks
     # Hint: Use len() to determine the total number of binary variables
 
 
@@ -72,7 +72,7 @@ if __name__ == '__main__':
 
 
     # Process and print solution
-    print("\nPart 4 solution: Test the initial state with 1 constraint using binary variables\n")
+    print("\nPart 4 solution: Test the initial state with one constraint using binary variables\n")
     """Read in initial state returned using .state(0) and display solution."""
 
     # TODO: Define the number of states: only 1 state will be tested 

@@ -38,7 +38,7 @@ def build_model(stockcodes, returns, num_stocks_to_buy):
     ## Hint: Remember to import the required package at the top of the file 
 
 
-    # TODO: Define your set variable and store it in selected_stocks
+    # TODO: Define the set variable and store it in selected_stocks
     # Hint: Use len() to specify the total number of elements
 
 
@@ -81,7 +81,7 @@ if __name__ == '__main__':
 
 
     # Process and print solution
-    print("\nPart 8 solution: Submit the problem to the Stride hybrid solver with 1 constraint using set variables\n")
+    print("\nPart 8 solution: Submit the problem to the Stride hybrid solver with one constraint using set variables\n")
     """Read in solution returned using .state(0) and display solution."""
 
     # TODO: Return the optimal solution for the set variable symbol and store it stocks_state

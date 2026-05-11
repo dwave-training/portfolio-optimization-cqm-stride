@@ -42,7 +42,7 @@ def build_model(stockcodes, returns, num_stocks_to_buy, price, budget,variance):
     ## Hint: Remember to import the required package at the top of the file 
 
 
-    # TODO: Define your binary variable and call it stocks
+    # TODO: Define the binary variable and call it stocks
     # Hint: Use len() to determine the total number of binary variables
 
 

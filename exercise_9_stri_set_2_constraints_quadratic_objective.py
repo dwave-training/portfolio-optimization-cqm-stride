@@ -42,7 +42,7 @@ def build_model(stockcodes, returns, num_stocks_to_buy, price, budget, variance)
     ## Hint: Remember to import the required package at the top of the file 
 
 
-    # TODO: Define your set variable and store it in selected_stocks
+    # TODO: Define the set variable and store it in selected_stocks
     # Hint: Use len() to specify the total number of elements
 
 
