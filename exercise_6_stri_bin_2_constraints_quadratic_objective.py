@@ -27,9 +27,9 @@ def build_model(stockcodes, returns, num_stocks_to_buy, price, budget,variance):
             
     Args:
         stockcodes (list): List of stocks under consideration
-        returns (list): List of average monthly returns for each stock in stockcodes
+        returns (list): List of average monthly returns for each stock in 'stockcodes'
         num_stocks_to_buy (int): Number of stocks to purchase
-        price (list): List of current daily price for each stock in stockcodes
+        price (list): List of current daily price for each stock in 'stockcodes'
         budget (float): Budget for purchase
         variance (2D numpy array): Entry [i][j] is the variance between stocks i and j
         
@@ -38,23 +38,23 @@ def build_model(stockcodes, returns, num_stocks_to_buy, price, budget,variance):
         stocks
     """
     
-    # TODO: Initialize the nonlinear model called model
+    # TODO: Initialize the nonlinear model called 'model'
     ## Hint: Remember to import the required package at the top of the file 
 
 
-    # TODO: Define the binary variable and call it stocks
+    # TODO: Define the binary variable and call it 'stocks'
     # Hint: Use len() to determine the total number of binary variables
 
 
     # TODO: Add the constants to the model object
-    # Hint: Add the constant returns to the model object and name it ret
-    # Hint: Add the constant num_stocks_to_buy to the model object and name it capacity
+    # Hint: Add the constant 'returns' to the model object and name it 'ret'
+    # Hint: Add the constant 'num_stocks_to_buy' to the model object and name it 'capacity'
 
 
     # TODO: Add the constants to the model object
-    # Hint: Add the constant price to the model object and name it pri
-    # Hint: Add the constant budget to the model object and name it bud
-    # Hint: Add the constant variance to the model object and name it var
+    # Hint: Add the constant 'price' to the model object and name it 'pri'
+    # Hint: Add the constant 'budget' to the model object and name it 'bud'
+    # Hint: Add the constant 'variance' to the model object and name it 'var'
 
 
     # TODO: Set the objective function: maximize returns and Minimize variance
@@ -72,7 +72,7 @@ def build_model(stockcodes, returns, num_stocks_to_buy, price, budget,variance):
 
 def sample_nl(model):
 
-    # TODO: Instantiate the sampler, and name it sampler 
+    # TODO: Instantiate the sampler, and name it 'sampler' 
     ## Hint: Remember to import the required package at the top of the file 
 
 
@@ -106,10 +106,10 @@ if __name__ == '__main__':
     print("\nPart 6 solution: Submit the problem to the Stride hybrid solver with quadratic objective using binary variables \n")
     """Read in solution returned using .state(0) and display solution."""
 
-    # TODO: Return the optimal solution for the binary variable symbol and store it stocks_state
+    # TODO: Return the optimal solution for the binary variable symbol and store it 'stocks_state'
 
 
-    # TODO: Return the objective value of the optimal solution and store it objective_value
+    # TODO: Return the objective value of the optimal solution and store it 'objective_value'
 
 
     selected_indices = [i for i, val in enumerate(stocks_state) if round(val) == 1]

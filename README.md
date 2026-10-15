@@ -44,7 +44,7 @@ Open the code file `exercise_1_cqm_1_constraint.py`.
 
       - Set an objective function in the CQM to maximize returns.
 
-   3. In the `sample_cqm` function:
+   3. In the `get_sampleset` function:
 
       - Define the sampler to be used. Remember to import any necessary packages.
 

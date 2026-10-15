@@ -25,10 +25,10 @@ def define_variables(stockcodes):
     
     Returns:
         stocks (list): 
-            List of variables named 's_{stk}' for each stock stk in stockcodes, where stk is replaced by the stock code.
+            List of variables named 's_{stk}' for each stock stk in 'stockcodes', where stk is replaced by the stock code.
     """
 
-    # TODO: Define the list of variables and call it stocks
+    # TODO: Define the list of variables and call it 'stocks'
     ## Hint: Remember to import the required package at the top of the file for binary variables
 
 
@@ -46,13 +46,13 @@ def build_cqm(stocks, num_stocks_to_buy, price, returns, budget, variance):
             
     Args:
         stocks (list):
-            List of variables named 's_{stk}' for each stock in stockcodes
+            List of variables named 's_{stk}' for each stock in 'stockcodes'
         num_stocks_to_buy (int): Number of stocks to purchase
         price (list):
-            List of current price for each stock in stocks
+            List of current price for each stock in 'stocks'
                 where price[i] is the price for stocks[i]
         returns (list):
-            List of average monthly returns for each stock in stocks
+            List of average monthly returns for each stock in 'stocks'
                 where returns[i] is the average returns for stocks[i]
         budget (float):
             Budget for purchase
@@ -63,7 +63,7 @@ def build_cqm(stocks, num_stocks_to_buy, price, returns, budget, variance):
         cqm (ConstrainedQuadraticModel)
     """
 
-    # TODO: Initialize the ConstrainedQuadraticModel called cqm
+    # TODO: Initialize the ConstrainedQuadraticModel called 'cqm'
     ## Hint: Remember to import the required package at the top of the file for ConstrainedQuadraticModels
 
 
@@ -82,13 +82,13 @@ def build_cqm(stocks, num_stocks_to_buy, price, returns, budget, variance):
 
     return cqm
 
-def sample_cqm(cqm):
+def get_sampleset(cqm):
 
     # TODO: Define your sampler as LeapHybridCQMSampler
     ## Hint: Remember to import the required package at the top of the file
 
 
-    # TODO: Sample the ConstrainedQuadraticModel cqm and store the result in sampleset
+    # TODO: Sample the ConstrainedQuadraticModel cqm and store the result in 'sampleset'
 
 
     return sampleset
@@ -113,7 +113,7 @@ if __name__ == '__main__':
     cqm = build_cqm(stocks, num_stocks_to_buy, price, returns, budget, variance)
 
     # Run CQM on hybrid solver
-    sampleset = sample_cqm(cqm)
+    sampleset = get_sampleset(cqm)
     
     # Process and print solution
     print("\nPart 3 solution: Submit the problem to the CQM hybrid solver with two constraints and quadratic objective using binary variables \n")
