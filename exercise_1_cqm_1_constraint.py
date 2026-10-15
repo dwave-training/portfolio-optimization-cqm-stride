@@ -61,7 +61,7 @@ def build_cqm(stocks, num_stocks_to_buy, returns):
     ## Important: Use the label 'choose k stocks', this label is case sensitive
 
 
-    # TODO: Add an objective function maximize returns
+    # TODO: Add an objective function to maximize returns
     ## Hint: Use the information in returns, and remember to convert to minimization
 
 

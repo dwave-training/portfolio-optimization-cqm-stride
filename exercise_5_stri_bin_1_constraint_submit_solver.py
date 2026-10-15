@@ -85,12 +85,12 @@ if __name__ == '__main__':
 
     # Process and print solution
     print("\nPart 5 solution: Submit the problem to the Stride hybrid solver with one constraint using binary variables\n")
-    """Read in solution returned using .state(0) and display solution."""
+    """Read the solution returned using .state(0) and display the solution."""
 
-    # TODO: Return the optimal solution for the binary variable symbol and store it 'stocks_state'
+    # TODO: Return the optimal solution for the binary variable symbol and store it in 'stocks_state'
 
 
-    # TODO: Return the objective value of the optimal solution and store it 'objective_value'
+    # TODO: Return the objective value of the optimal solution and store it in 'objective_value'
 
 
     selected_indices = [i for i, val in enumerate(stocks_state) if round(val) == 1]

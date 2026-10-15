@@ -49,7 +49,7 @@ def build_cqm(stocks, num_stocks_to_buy, price, returns, budget, variance):
             List of variables named 's_{stk}' for each stock in 'stockcodes'
         num_stocks_to_buy (int): Number of stocks to purchase
         price (list):
-            List of current price for each stock in 'stocks'
+            List of current prices for each stock in 'stocks'
                 where price[i] is the price for stocks[i]
         returns (list):
             List of average monthly returns for each stock in 'stocks'
@@ -75,8 +75,8 @@ def build_cqm(stocks, num_stocks_to_buy, price, returns, budget, variance):
     ## Important: Use the label 'budget_limitation', this label is case sensitive and uses an underscore
 
 
-    # TODO: Add an objective function maximize returns AND minimize variance
-    ## Hint: Determine each objective separately then add them together
+    # TODO: Add an objective function to maximize returns AND minimize variance
+    ## Hint: Determine each objective separately, then add them together
     ## Hint: Variance is computed as a quadratic term: variance[i][j]*stocks[i]*stocks[j]
 
 
@@ -116,5 +116,5 @@ if __name__ == '__main__':
     sampleset = get_sampleset(cqm)
     
     # Process and print solution
-    print("\nPart 3 solution: Submit the problem to the CQM hybrid solver with two constraints and quadratic objective using binary variables \n")
+    print("\nPart 3 solution: Submit the problem to the CQM hybrid solver with two constraints and a quadratic objective using binary variables \n")
     utilities_cqm.process_sampleset(sampleset, stockcodes)

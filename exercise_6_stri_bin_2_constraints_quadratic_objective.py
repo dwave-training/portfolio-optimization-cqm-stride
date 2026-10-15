@@ -29,7 +29,7 @@ def build_model(stockcodes, returns, num_stocks_to_buy, price, budget,variance):
         stockcodes (list): List of stocks under consideration
         returns (list): List of average monthly returns for each stock in 'stockcodes'
         num_stocks_to_buy (int): Number of stocks to purchase
-        price (list): List of current daily price for each stock in 'stockcodes'
+        price (list): List of current daily prices for each stock in 'stockcodes'
         budget (float): Budget for purchase
         variance (2D numpy array): Entry [i][j] is the variance between stocks i and j
         
@@ -57,8 +57,8 @@ def build_model(stockcodes, returns, num_stocks_to_buy, price, budget,variance):
     # Hint: Add the constant 'variance' to the model object and name it 'var'
 
 
-    # TODO: Set the objective function: maximize returns and Minimize variance
-    ## Hint: Determine each objective separately then add them together
+    # TODO: Set the objective function: maximize returns and minimize variance
+    ## Hint: Determine each objective separately, then add them together
     ## Hint: Variance is computed as a quadratic term: var[i][j]*stocks[i]*stocks[j]
 
 
@@ -103,13 +103,13 @@ if __name__ == '__main__':
 
 
     # Process and print solution
-    print("\nPart 6 solution: Submit the problem to the Stride hybrid solver with quadratic objective using binary variables \n")
-    """Read in solution returned using .state(0) and display solution."""
+    print("\nPart 6 solution: Submit the problem to the Stride hybrid solver with a quadratic objective using binary variables \n")
+    """Read the solution returned using .state(0) and display the solution."""
 
-    # TODO: Return the optimal solution for the binary variable symbol and store it 'stocks_state'
+    # TODO: Return the optimal solution for the binary variable symbol and store it in 'stocks_state'
 
 
-    # TODO: Return the objective value of the optimal solution and store it 'objective_value'
+    # TODO: Return the objective value of the optimal solution and store it in 'objective_value'
 
 
     selected_indices = [i for i, val in enumerate(stocks_state) if round(val) == 1]

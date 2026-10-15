@@ -69,19 +69,19 @@ if __name__ == '__main__':
 
     # Process and print solution
     print("\nPart 7 solution: Test the initial state with one constraint using set variables\n")
-    """Read in initial state returned using .state(0) and display solution."""
+    """Read the initial state returned using .state(0) and display the solution."""
 
     # TODO: Define the number of states: only 1 state will be tested 
 
 
     # TODO: Provide the following initial state: [3,4]
-    # Hint: Use the `set_state()` method to assign the specifcied state to its index. 
+    # Hint: Use the `set_state()` method to assign the specified state to its index. 
 
 
-    # TODO: Return the initial state for the set variable symbol and store it 'stocks_state'
+    # TODO: Return the initial state for the set variable symbol and store it in 'stocks_state'
 
 
-    # TODO: Return the objective value of the initial state and store it 'objective_value'
+    # TODO: Return the objective value of the initial state and store it in 'objective_value'
 
 
     selected_indices = sorted(int(i) for i in stocks_state)

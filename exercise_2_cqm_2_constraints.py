@@ -47,7 +47,7 @@ def build_cqm(stocks, num_stocks_to_buy, price, returns, budget):
             List of variables named 's_{stk}' for each stock in 'stockcodes'
         num_stocks_to_buy (int): Number of stocks to purchase
         price (list):
-            List of current price for each stock in 'stocks'
+            List of current prices for each stock in 'stocks'
                 where price[i] is the price for stocks[i]
         returns (list):
             List of average monthly returns for each stock in 'stocks'
@@ -67,7 +67,7 @@ def build_cqm(stocks, num_stocks_to_buy, price, returns, budget):
     ## Important: Use the label 'choose k stocks', this label is case sensitive
 
 
-    # TODO: Add an objective function maximize returns
+    # TODO: Add an objective function to maximize returns
     ## Hint: Use the information in returns and remember to convert to minimization
 
 
