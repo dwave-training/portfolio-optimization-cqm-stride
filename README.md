@@ -6,7 +6,7 @@
 
 For the portfolio optimization problem, we will develop a program that produces an optimized selection of stocks. We will approach this problem using both the Constrained Quadratic Model and Stride hybrid solvers, allowing comparison between the two solvers. Additionally, when using the Stride hybrid solver, we will represent the decision variable as a binary variable and then as a set. 
 
-In this exercise, two-year data for 10 stocks are used and their average return rates are calculated using daily closing prices. The stocks considered in this exercise are "T" (AT&T), "SFL" (FSL), "PFE" (Pfizer), "XOM" (Exxon Mobil), "MO" (Altria Group), "VZ" (Verizon Communications), "IBM" (IBM), "TSLA" (Tesla), "GILD" (Gilead Sciences), and "GE" (General Electric). In the folder `data` are CSV files with daily closing prices and monthly returns for each stock in this period of time.
+In this exercise, two-year data for 10 stocks are used and their average return rates are calculated using daily closing prices. The stocks considered in this exercise are "T" (AT&T), "SFL" (SFL), "PFE" (Pfizer), "XOM" (Exxon Mobil), "MO" (Altria Group), "VZ" (Verizon Communications), "IBM" (IBM), "TSLA" (Tesla), "GILD" (Gilead Sciences), and "GE" (General Electric). In the folder `data` are CSV files with daily closing prices and monthly returns for each stock in this period of time.
 
 Using available data, stocks can be analyzed individually. For example, the figure below shows a 50-day candlestick chart and its moving average over 5-day and 10-day windows for stock GE. However, a much more effective way to optimize a portfolio is to consider a collection of stocks and how they might balance each other out.
 
@@ -28,7 +28,7 @@ For condition 3, compute the covariance between pairs of stocks from the average
 
 ## Exercise 1: CQM with one constraint
 
-For the upcoming three exercises, build the portfolio optimiation problem using the CQM hybrid solver. 
+For the upcoming three exercises, build the portfolio optimization problem using the CQM hybrid solver. 
 
 In exercise 1, build a basic portfolio of two stocks in order to maximize returns.
 
@@ -44,7 +44,7 @@ Open the code file `exercise_1_cqm_1_constraint.py`.
 
       - Set an objective function in the CQM to maximize returns.
 
-   3. In the `sample_cqm` function:
+   3. In the `get_sampleset` function:
 
       - Define the sampler to be used. Remember to import any necessary packages.
 
@@ -70,15 +70,15 @@ Open the code file `exercise_3_cqm_quadratic_objective.py`.
 
    2. In the `build_cqm` function, add "minimize variance" to the objective. Some hints:
 
-      - Determine each objective separately then add them together.
+      - Determine each objective separately, then add them together.
 
       - Variance is computed as a quadratic term: `variance[i][j]*stocks[i]*stocks[j]` for **distinct** pairs (i, j).
       
-      - Note: In Markowitz's modern portfolio theory, typically variance-covariance Matrix sums up linear and quadratic terms with summations to start at 1 for both i and j. However, for this particular practice problem, **try to only look at distinct pairs of sums**. This modification means we examine only the effect between pairs of different stocks in this practice problem.
+      - Note: In Markowitz's modern portfolio theory, typically variance-covariance matrix sums up linear and quadratic terms with summations to start at 1 for both i and j. However, for this particular practice problem, **try to only look at distinct pairs of sums**. This modification means we examine only the effect between pairs of different stocks in this practice problem.
 
 ## Exercise 4: Stride with binary variable and one constraint then test initial state
 
-For the next three exercises, build the same portfolio optimiation problem, but this time use the Stride hybrid solver. First, model the problem using a binary variable to represent  the decision variable. Test an initial state to explore the code, then submit it to the Stride hybrid solver.
+For the next three exercises, build the same portfolio optimization problem, but this time use the Stride hybrid solver. First, model the problem using a binary variable to represent the decision variable. Test an initial state to explore the code, then submit it to the Stride hybrid solver.
 
 In exercise 4, build a basic portfolio of two stocks in order to maximize returns. Then, test the code with an initial state. 
 
@@ -104,7 +104,7 @@ Open the code file `exercise_4_stri_bin_1_constraint_initial_state.py`.
 
       - Define the number of states. In this case, only one state is being tested. 
    
-      - Provide the following initial state `[0,0,0,1,1,0,0,0,0,0]`. This is a vector of 10 binary variables that is chosen randomly and satisfies the constraint. Remember to use the `set_state()` method to assign the specifcied state to its index. 
+      - Provide the following initial state `[0,0,0,1,1,0,0,0,0,0]`. This is a vector of 10 binary variables that is chosen randomly and satisfies the constraint. Remember to use the `set_state()` method to assign the specified state to its index. 
 
       - Return the initial state for the binary variable symbol and store it in `stocks_state`. 
 
@@ -156,7 +156,7 @@ Open up the code file `exercise_6_stri_bin_2_constraints_quadratic_objective.py`
 
 ## Exercise 7: Stride with set variable and one constraint then test initial state
 
-For the next three exercises, build the same portfolio optimiation problem as before using the Stride hybrid solver, but this time use a set as the decision variable instead of binary.
+For the next three exercises, build the same portfolio optimization problem as before using the Stride hybrid solver, but this time use a set as the decision variable instead of binary.
 
 In exercise 7, build a basic portfolio of two stocks in order to maximize returns. Then, test the code with an initial state. 
 
@@ -179,7 +179,7 @@ Open the code file `exercise_7_stri_set_1_constraint_initial_state.py`.
 
       - Define the number of states. In this case, only one state is being tested. 
    
-      - Provide the following initial state `[3, 4]`. This set is chosen randomly and satisfies the constraint. Remember to use the `set_state()` method to assign the specifcied state to its index. 
+      - Provide the following initial state `[3, 4]`. This set is chosen randomly and satisfies the constraint. Remember to use the `set_state()` method to assign the specified state to its index. 
 
       - Return the initial state for the set variable symbol, and store it in `stocks_state`. 
 
@@ -209,7 +209,7 @@ Open the code file `exercise_8_stri_set_1_constraint_submit_solver.py`.
 
 ## Exercise 9: Stride with set variable, two constraints, and quadratic objective, then submit to the solver
 
-For exercise 9, start with the nonlinear model built in exercise 8 add an additional objective to minimize variance, then add a constraint for the available budget.
+For exercise 9, start with the nonlinear model built in exercise 8, add an additional objective to minimize variance, then add a constraint for the available budget.
 
 Open the code file `exercise_9_stri_set_2_constraints_quadratic_objective.py`.
 

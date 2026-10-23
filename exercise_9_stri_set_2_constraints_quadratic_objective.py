@@ -27,9 +27,9 @@ def build_model(stockcodes, returns, num_stocks_to_buy, price, budget, variance)
             
     Args:
         stockcodes (list): List of stocks under consideration
-        returns (list): List of average monthly returns for each stock in stockcodes
+        returns (list): List of average monthly returns for each stock in 'stockcodes'
         num_stocks_to_buy (int): Number of stocks to purchase
-        price (list): List of current daily price for each stock in stockcodes
+        price (list): List of current daily prices for each stock in 'stockcodes'
         budget (float): Budget for purchase
         variance (2D numpy array): Entry [i][j] is the variance between stocks i and j
         
@@ -38,26 +38,26 @@ def build_model(stockcodes, returns, num_stocks_to_buy, price, budget, variance)
         selected_stocks
     """
     
-    # TODO: Initialize the nonlinear model called model
+    # TODO: Initialize the nonlinear model called 'model'
     ## Hint: Remember to import the required package at the top of the file 
 
 
-    # TODO: Define the set variable and store it in selected_stocks
+    # TODO: Define the set variable and store it in 'selected_stocks'
     # Hint: Use len() to specify the total number of elements
 
 
     # TODO: Add the constant to the model object
-    # Hint: Add the constant returns to the model object and name it ret
+    # Hint: Add the constant 'returns' to the model object and name it 'ret'
 
 
     # TODO: Add the constants to the model object
-    # Hint: Add the constant price to the model object and name it pri
-    # Hint: Add the constant budget to the model object and name it bud
-    # Hint: Add the constant variance to the model object and name it var
+    # Hint: Add the constant 'price' to the model object and name it 'pri'
+    # Hint: Add the constant 'budget' to the model object and name it 'bud'
+    # Hint: Add the constant 'variance' to the model object and name it 'var'
 
 
-    # TODO: Set the objective function: maximize returns and Minimize variance
-    ## Hint: Determine each objective separately then add them together
+    # TODO: Set the objective function: maximize returns and minimize variance
+    ## Hint: Determine each objective separately, then add them together
     ## Hint: Variance is computed as a quadratic term: var[i][j] for i, j in combinations(selected_stocks, 2)
     ## Hint: Remember to import combinations, it lives in itertools
 
@@ -69,7 +69,7 @@ def build_model(stockcodes, returns, num_stocks_to_buy, price, budget, variance)
 
 def sample_nl(model):
 
-    # TODO: Instantiate the sampler, and name it sampler 
+    # TODO: Instantiate the sampler, and name it 'sampler' 
     ## Hint: Remember to import the required package at the top of the file 
 
 
@@ -100,19 +100,19 @@ if __name__ == '__main__':
 
 
     # Process and print solution
-    print("\nPart 9 solution: Submit the problem to the Stride hybrid solver with quadratic objective using set variables \n")
-    """Read in solution returned using .state(0) and display solution."""
+    print("\nPart 9 solution: Submit the problem to the Stride hybrid solver with a quadratic objective using set variables \n")
+    """Read the solution returned using .state(0) and display the solution."""
 
-    # TODO: Return the optimal solution for the set variable symbol and store it stocks_state
+    # TODO: Return the optimal solution for the set variable symbol and store it in 'stocks_state'
 
 
-    # TODO: Return the objective value of the optimal solution and store it objective_value
+    # TODO: Return the objective value of the optimal solution and store it in 'objective_value'
 
 
     selected_indices = sorted(int(i) for i in stocks_state)
     selected_stocks = [stockcodes[i] for i in selected_indices]
 
     print(f"Objective Value of the optimal solution: {objective_value:.6f}")
-    print(f"Selected indices: {stocks_state}")
+    print(f"Stocks (at state 0): {stocks_state}")
     print(f"Selected indices: {selected_indices}")
     print(f"Selected stocks: {selected_stocks}")

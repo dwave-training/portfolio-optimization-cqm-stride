@@ -26,7 +26,7 @@ def build_model(stockcodes, returns, num_stocks_to_buy):
             
     Args:
         stockcodes (list): List of stocks under consideration
-        returns (list): List of average monthly returns for each stock in stockcodes
+        returns (list): List of average monthly returns for each stock in 'stockcodes'
         num_stocks_to_buy (int): Number of stocks to purchase
         
     Returns:
@@ -34,17 +34,17 @@ def build_model(stockcodes, returns, num_stocks_to_buy):
         stocks
     """
     
-    # TODO: Initialize the nonlinear model called model
+    # TODO: Initialize the nonlinear model called 'model'
     ## Hint: Remember to import the required package at the top of the file 
 
 
-    # TODO: Define the binary variable and call it stocks
+    # TODO: Define the binary variable and call it 'stocks'
     # Hint: Use len() to determine the total number of binary variables
 
 
     # TODO: Add the constants to the model object
-    # Hint: Add the constant returns to the model object and name it ret
-    # Hint: Add the constant num_stocks_to_buy to the model object and name it capacity
+    # Hint: Add the constant 'returns' to the model object and name it 'ret'
+    # Hint: Add the constant 'num_stocks_to_buy' to the model object and name it 'capacity'
 
 
     # TODO: Set the objective function: maximize returns
@@ -73,19 +73,19 @@ if __name__ == '__main__':
 
     # Process and print solution
     print("\nPart 4 solution: Test the initial state with one constraint using binary variables\n")
-    """Read in initial state returned using .state(0) and display solution."""
+    """Read the initial state returned using .state(0) and display the solution."""
 
     # TODO: Define the number of states: only 1 state will be tested 
 
 
     # TODO: Provide the following initial state: [0,0,0,1,1,0,0,0,0,0]
-    # Hint: Use the `set_state()` method to assign the specifcied state to its index. 
+    # Hint: Use the `set_state()` method to assign the specified state to its index. 
 
 
-    # TODO: Return the initial state for the binary variable symbol and store it stocks_state
+    # TODO: Return the initial state for the binary variable symbol and store it in 'stocks_state'
 
 
-    # TODO: Return the objective value of the initial state and store it objective_value
+    # TODO: Return the objective value of the initial state and store it in 'objective_value'
 
 
     selected_indices = [i for i, val in enumerate(stocks_state) if round(val) == 1]
