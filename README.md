@@ -6,7 +6,7 @@
 
 For the portfolio optimization problem, we will develop a program that produces an optimized selection of stocks. We will approach this problem using both the Constrained Quadratic Model and Stride hybrid solvers, allowing comparison between the two solvers. Additionally, when using the Stride hybrid solver, we will represent the decision variable as a binary variable and then as a set. 
 
-In this exercise, two-year data for 10 stocks are used and their average return rates are calculated using daily closing prices. The stocks considered in this exercise are "T" (AT&T), "SFL" (SFL), "PFE" (Pfizer), "XOM" (Exxon Mobil), "MO" (Altria Group), "VZ" (Verizon Communications), "IBM" (IBM), "TSLA" (Tesla), "GILD" (Gilead Sciences), and "GE" (General Electric). In the folder `data` are CSV files with daily closing prices and monthly returns for each stock in this period of time.
+In this exercise, two years of data for 10 stocks were used and their average return rates are calculated using daily closing prices. The stocks considered in this exercise are "T" (AT&T), "SFL" (SFL), "PFE" (Pfizer), "XOM" (Exxon Mobil), "MO" (Altria Group), "VZ" (Verizon Communications), "IBM" (IBM), "TSLA" (Tesla), "GILD" (Gilead Sciences), and "GE" (General Electric). In the folder `data` are CSV files with daily closing prices and monthly returns for each stock in this period of time.
 
 Using available data, stocks can be analyzed individually. For example, the figure below shows a 50-day candlestick chart and its moving average over 5-day and 10-day windows for stock GE. However, a much more effective way to optimize a portfolio is to consider a collection of stocks and how they might balance each other out.
 
@@ -24,7 +24,7 @@ For condition 1, use average return rates prepared in the CSV file, `monthly_ret
 
 For condition 2, use the last day's closing price from the file, `lastday_closing_price.csv`, to ensure the available budget is not exceeded.
 
-For condition 3, compute the covariance between pairs of stocks from the average returns information that is available. Covariance allows us to take into account how similar or different the behavior of the two stocks are. When the covariance is large, the two stocks behave in a similar manner – if one stock value drops then it's likely that the other will as well. We want to minimize the covariance in order to minimize the risk of the portfolio. The covariance is calculated in the exercise program files and provided for use.
+For condition 3, compute the covariance between pairs of stocks from the average returns information that is available. Covariance allows us to take into account how similar or different the behavior of the two stocks are. When the covariance is large and positive, the two stocks behave in a similar manner – if one stock value drops then it's likely that the other will as well. We want to minimize the covariance in order to minimize the risk of the portfolio. The covariance is calculated in the exercise program files and provided for use.
 
 ## Exercise 1: CQM with one constraint
 
@@ -166,7 +166,7 @@ Open the code file `exercise_7_stri_set_1_constraint_initial_state.py`.
    
       - Create a nonlinear model object called `model` and import the required package.
       
-      - Define the set decision variable and store it in `selected_stocks`. Use `len()` to specify the total number of elements in the set as `range(len())`. The constraint on the number of selected stocks is enforced implicitly. Ensuring that exactly two stocks are selected is enforced by the structure of the set decision variable, which restricts its size. Be sure to specify this using the `min_size` and `max_size` parameters.
+      - Define the set decision variable and store it in `selected_stocks`. Use `len()` to specify the total number of elements in the set as `range(len())`. Ensuring that exactly two stocks are selected is enforced by the structure of the set decision variable, which restricts its size. Be sure to specify this using the `min_size` and `max_size` parameters.
 
       - Add the constant to the model object. 
          - Add `returns` to the model object and name it `ret`.
